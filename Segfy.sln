@@ -15,7 +15,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Segfy.Application", "Segfy.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Segfy.Service", "Segfy.Service\Segfy.Service.csproj", "{72161035-FA8C-4A5F-AA46-3C29A432A3CB}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Segfy.UnitTest", "Segfy.UnitTest\Segfy.UnitTest.csproj", "{844237B4-359F-4689-BEDF-3F19B3BDCA82}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Segfy.IntegrationTest", "Segfy.UnitTest\Segfy.IntegrationTest.csproj", "{844237B4-359F-4689-BEDF-3F19B3BDCA82}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

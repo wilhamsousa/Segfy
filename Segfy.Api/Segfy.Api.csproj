@@ -19,9 +19,5 @@
     <ProjectReference Include="..\Segfy.Application\Segfy.Application.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Controllers\Mvc\" />
-  </ItemGroup>
-
 
 </Project>
