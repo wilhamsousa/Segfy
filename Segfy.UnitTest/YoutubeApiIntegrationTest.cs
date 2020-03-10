@@ -24,39 +24,7 @@ namespace Segfy.UnitTest
 
             youtubeApiService = (IYoutubeApiService)service.GetService(typeof(IYoutubeApiService));
             youtubeService = (IYoutubeService)service.GetService(typeof(IYoutubeService));
-        }
-
-        //[TestMethod]
-        public void ManterYoutube()
-        {
-            var youtube = new Youtube()
-            {
-                Id = "1",
-                Kind = Domain.Enum.Enun.Kind.Video,
-                PublishedAt = "",
-                ChannelId = "",
-                Title = "Titulo",
-                Description = "Descrição",
-                DefaultUrl = "http://localhost",
-                DefaultWidth = 100,
-                DefaultHeight = 100,
-
-                MediumUrl = "",
-                MediumWidth = 100,
-                MediumHeight = 100,
-
-                HighUrl = "",
-                HighWidth = 100,
-                HighHeight = 100,
-
-                ChannelTitle = "",
-                LiveBroadcastContent = "",
-            };
-
-            //faltou aplicar MOCK
-            //var response = youtubeService.Manter(youtube);
-            //Assert.IsTrue(response);
-        }
+        }        
 
         [TestMethod]
         public void PesquisarYoutubeVideo()
