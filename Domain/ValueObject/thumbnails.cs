@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace Segfy.Domain.Entities
+namespace Segfy.Domain.ValueObject
 {
     public class thumbnails
     {

@@ -15,7 +15,7 @@ namespace Segfy.Service
     public class YoutubeApiService : IYoutubeApiService
     {
 
-        public async Task<List<YoutubeObject>> PesquisarVideo(string param)
+        public async Task<List<YoutubeObject>> PesquisarYoutube(string param, string type)
         {
             NameValueCollection queryString = System.Web.HttpUtility.ParseQueryString(string.Empty);
 
@@ -27,7 +27,7 @@ namespace Segfy.Service
             {
                 using (HttpClient client = new HttpClient())
                 {
-                    HttpResponseMessage response = await client.GetAsync($"https://www.googleapis.com/youtube/v3/search?key={key}&part=snippet&mine=true&q={q}&maxResults=16&type=video");
+                    HttpResponseMessage response = await client.GetAsync($"https://www.googleapis.com/youtube/v3/search?key={key}&part=snippet&mine=true&q={q}&maxResults=16&type={type}");
                     if (response.IsSuccessStatusCode)
                     {
                         var json = await response.Content.ReadAsStringAsync();

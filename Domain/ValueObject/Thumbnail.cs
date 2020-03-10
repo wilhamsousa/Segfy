@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Segfy.Domain.Entities
+namespace Segfy.Domain.ValueObject
 {
     public class Thumbnail
     {

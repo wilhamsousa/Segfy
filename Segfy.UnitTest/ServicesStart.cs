@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using Segfy.Repository.Entity;
 using Segfy.Service;
 using Segfy.Service.Interface;
 using System;
@@ -12,6 +13,7 @@ namespace Segfy.UnitTest
         public void Create(ref IServiceProvider service)
         {
             var services = new ServiceCollection();
+
             services.AddTransient<IYoutubeApiService, YoutubeApiService>();
             service = services.BuildServiceProvider();
         }

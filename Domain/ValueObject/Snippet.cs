@@ -1,5 +1,5 @@
 ﻿
-namespace Segfy.Domain.Entities
+namespace Segfy.Domain.ValueObject
 {
     public class Snippet
     {

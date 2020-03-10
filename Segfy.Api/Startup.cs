@@ -9,6 +9,13 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Segfy.Application;
+using Segfy.Application.Interface;
+using Segfy.Repository.Entity;
+using Segfy.Repository.Repository;
+using Segfy.Repository.Repository.Interface;
+using Segfy.Service;
+using Segfy.Service.Interface;
 
 namespace Segfy.Api
 {
@@ -25,6 +32,12 @@ namespace Segfy.Api
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddDbContext<Context>();
+
+            services.AddTransient<IYoutubeApplication, YoutubeApplication>();
+            services.AddTransient<IYoutubeService, YoutubeService>();
+            services.AddTransient<IYoutubeApiService, YoutubeApiService>();
+            services.AddTransient<IYoutubeRepository, YoutubeRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -43,6 +56,12 @@ namespace Segfy.Api
             {
                 endpoints.MapControllers();
             });
+
+            app.UseHttpsRedirection();
+            //app.UseMvc(routes =>
+            //{
+            //    routes.MapRoute("default", "{controller=Youtube}/{action=Index}/{id?}");
+            //});
         }
     }
 }
